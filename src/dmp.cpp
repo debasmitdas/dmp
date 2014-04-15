@@ -154,17 +154,17 @@ void learnFromDemo(const DMPTraj &demo,
  * @param[out] at_goal True if the final time is greater than tau AND the planned position is within goal_thresh of the goal
  */
 void generatePlan(const vector<DMPData> &dmp_list,
-				  const vector<double> &x_0,
-				  const vector<double> &x_dot_0,
-				  const double &t_0,
-				  const vector<double> &goal,
-				  const vector<double> &goal_thresh,
-				  const double &seg_length,
-				  const double &tau,
-				  const double &total_dt,
-				  const int &integrate_iter,
-				  DMPTraj &plan,
-				  uint8_t &at_goal)
+		  const vector<double> &x_0,
+		  const vector<double> &x_dot_0,
+		  const double &t_0,
+		  const vector<double> &goal,
+		  const vector<double> &goal_thresh,
+		  const double &seg_length,
+		  const double &tau,
+		  const double &total_dt,
+		  const int &integrate_iter,
+		  DMPTraj &plan,
+		  uint8_t &at_goal)
 {
 	plan.points.clear();
 	plan.times.clear();

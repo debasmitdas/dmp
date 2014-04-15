@@ -8,6 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  geometry_msgs
   message_generation
 )
 
@@ -47,6 +48,7 @@ find_package(Eigen REQUIRED)
 ## Generate messages in the 'msg' folder
 add_message_files(
    FILES
+ DMP.msg
  DMPData.msg
  DMPPoint.msg
  DMPTraj.msg
@@ -71,6 +73,7 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  geometry_msgs
 )
 
 ###################################
@@ -85,7 +88,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES dmp
-  CATKIN_DEPENDS message_runtime std_msgs
+  CATKIN_DEPENDS message_runtime std_msgs geometry_msgs
   DEPENDS Eigen
 )
 
