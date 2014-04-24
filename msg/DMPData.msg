@@ -1,5 +1,3 @@
 float64 k_gain
 float64 d_gain
 float64[] weights
-bool has_goal_offset
-geometry_msgs/Pose goal_offset
