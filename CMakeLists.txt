@@ -40,5 +40,9 @@ include_directories(
 )
 
 add_library(dmp src/dmp.cpp src/fourier_approx.cpp src/radial_approx.cpp)
+add_dependencies(dmp ${PROJECT_NAME}_gencpp)
+
 add_executable(dmp_server nodes/dmp_server.cpp)
+add_dependencies(dmp_server ${PROJECT_NAME}_gencpp)
 target_link_libraries(dmp_server dmp ${catkin_LIBRARIES})
+
